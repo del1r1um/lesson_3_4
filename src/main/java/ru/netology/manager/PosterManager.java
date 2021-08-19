@@ -4,7 +4,6 @@ import ru.netology.domain.Movie;
 
 public class PosterManager {
     private Movie[] movies = new Movie[0];
-    int resultMoviesLength;
     private int moviesDefault = 10;
 
     public PosterManager() {
@@ -24,6 +23,7 @@ public class PosterManager {
     }
 
     public Movie[] getAll() {
+        int resultMoviesLength;
         if (movies.length < moviesDefault) {
             resultMoviesLength = movies.length;
         } else {
